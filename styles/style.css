@@ -2,45 +2,13 @@
 
 \****************************************/
 
-/* Police importe de google font */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Police importée de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-/* Police personalise que j'ai telecharge */
+/* Police personnalisée téléchargée */
 @font-face {
   font-family: rainly;
   src: url(../fonts/RainlyRegular-OVl7O.otf);
-}
-
-:root {
-  /* Colors */
-  --red-highlight: #D2483D;
-  --light-grey: #F4F4F4;
-  --black: #1b1a1a;
-  --white: #f1f1f1;
-
-
-
-  /* Text configuration */
-  --body-font: "Poppins", sans-serif;
-  --body-highlight-font: "Poppins", sans-serif;
-  --header-font: "Lora", serif;
-  --title-font: "Lora", serif;
-
-
-  --body-font-weight: 400;
-  --body-highlight-font-weight: 600;
-  --header-font-weight: 400;
-  --title-font-weight: 400;
-
-  --body-font-size: 1.25rem;
-  --body-highlight-font-size: 1.25rem;
-  --header-font-size: 4.5rem;
-  --title-font-size: 1.5rem;
-
-  --body-line-height: 1.5rem;
-  --body-highlight-line-height: 1.5rem;
-  --header-line-height: 5.375rem;
-  --title-line-height: 1.75rem;
 }
 
 /************* Reset ************\
@@ -62,12 +30,12 @@ a {
 \*************************************/
 
 .topnav__link {
-  font-family: var(--body-font);
+  font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: var(--body-font-weight);
-  font-size: var(--body-font-size);
-  line-height: var(--body-highlight-line-height);
-  color: var(--light-grey);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #F4F4F4;
   text-decoration: none;
 }
 
@@ -81,25 +49,23 @@ a {
 \*********************************/
 
 .button {
-  color: inherit;
   background-color: #fff;
   border-radius: 999px;
-  padding: 10px 15px;
-  width: 180px;
-  border: 1px solid #cccc;
+  width: 150px;
+  height: 40px;
+  border: 1px solid #cccccc;
   text-transform: uppercase;
   transition:
     border-color .3s ease-out,
     color .3s ease-out;
   cursor: pointer;
   font-size: 16px;
-  text-align: center;
 }
 
 .button:hover,
 footer a:hover {
-  border-color: var(--red-highlight);
-  color: var(--red-highlight);
+  border-color: #D2483D;
+  color: #D2483D;
 }
 
 /************* Formulaire ************\
@@ -129,7 +95,7 @@ input,
 textarea {
   outline: 0;
   padding: 0;
-  border: 1px solid #cccc;
+  border: 1px solid #cccccc;
   padding: 8px;
   border-radius: 5px;
   transition: border-color .2s ease-out;
@@ -137,7 +103,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: var(--red-highlight);
+  border-color: #D2483D;
 }
 
 form {
@@ -166,27 +132,23 @@ form input[type="submit"] {
   justify-self: center;
 }
 
-
 /************* Footer ************\
 
 \*********************************/
 
-
 .footer ul {
   display: flex;
-  justify-content: flex-end;
   gap: 10px;
-  width: 50%;
 }
-.footer .topnav {
-  background: none;
+.footer p{
+  margin-top: 20px;
 }
 
 .footer ul a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   width: 44px;
   height: 44px;
   border-radius: 100%;
@@ -205,7 +167,6 @@ form input[type="submit"] {
   color: white;
   background-color: #25D366;
   border-color: #25D366;
-
 }
 
 .footer li:nth-child(3) a:hover {
@@ -214,115 +175,89 @@ form input[type="submit"] {
   color: #363434;
 }
 
-
 /************* Main Style ********\
 
 \*********************************/
 
 body {
-  background-color: var(--light-grey);
-  font-family: var(--body-font);
-  font-style: normal;
-  font-weight: var(--body-font-weight);
-  font-size: var(--body-font-size);
-  line-height: var(--body-line-height);
-  color: var(--black);
+  background-color: #F4F4F4;
+  font-family: "Poppins", sans-serif;
+  color: #1b1a1a;
 }
 
 h1 {
-  font-family: var(--header-font);
-  font-weight: var(--header-font-weight);
-  font-size: var(--header-font-size);
-  line-height: var(--header-line-height);
-  color: var(--black);
+  font-family: "Lora", serif;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 h2 {
-  font-family: var(--title-font);
-  font-weight: var(--title-font-weight);
-  font-size: var(--title-font-size);
-  line-height: var(--title-line-height);
-  color: var(--black);
-  text-decoration: underline var(--red-highlight);
+  font-family: "Lora", serif;
+
+  font-size: 1.5rem;
+  color: #1b1a1a;
+  text-decoration: underline #D2483D;
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 0.188rem;
   margin-bottom: 20px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  padding: 0 100px;
-  margin: 0 50px 50px;
-}
-
 #home-title {
-  color: var(--red-highlight);
-}
-
-.projet__content a:hover {
-  text-decoration: underline var(--red-highlight);
-  text-underline-offset: 5px;
-  text-decoration-thickness: 0.188rem;
-}
-
-tr td {
-  padding: 10px;
-}
-
-.passion {
-  display: grid;
-  row-gap: 20px;
-}
-#home-title {
-  color: var(--red-highlight);
+  color: #D2483D;
 }
 
 #karate {
   font-family: rainly;
-  font-size: var(--title-font-size);
+  font-size: 1.5rem;
 }
 
 .passion__image {
   width: 300px;
 }
 
+/************* Tableau personalisé ******\
+
+\****************************************/
+
+table {
+  background-color: #fff;
+}
+
+th {
+  color: #fff;
+  background-color: #1b1a1a;
+}
+
+tr td {
+  padding: 10px;
+}
 
 /************* Media Queries ************\
 
 \****************************************/
 
 @media (max-width: 768px) {
-  :root {
-    /* Mobile Variables */
-    --body-font-size: 1rem;
-    --body-highlight-font-size: 1rem;
-    --header-font-size: 2.5rem;
-    --title-font-size: 1.25rem;
-    --body-line-height: 1.25rem;
-    --body-highlight-line-height: 1.25rem;
-    --header-line-height: 3rem;
-    --title-line-height: 1.5rem;
+  body {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 
+  .topnav__link{
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 
   form {
     width: 350px;
-  }
-
-  .footer ul {
-    justify-content: center;
-    width: 100%;
-  } 
-
-  .button {
-    font-size: 10px;
-    width: 130px;
-    padding: 8px 10px;
-    align-self: start;
   }
 
   .contact {
@@ -333,38 +268,12 @@ tr td {
     width: 400px;
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    padding: 0 10px;
-    margin: 0 50px 50px;
-    align-items: center;
-  }
-
-  .content h2 {
-    align-self: start;
-  }
-
-  .passion {
-    display: flex;
-    flex-direction: column;
-  }
-
   .topnav {
     display: grid;
   }
 
-  .topnav div:first-child{
+  .topnav div:first-child {
     justify-self: center;
   }
 }
 
-/* ========================================================= */
-table {
-  background-color: #fff;
-}
-th {
-  color: #fff;
-  background-color: #1b1a1a;
-}
