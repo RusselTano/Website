@@ -18,12 +18,6 @@
   padding: 0;
 }
 
-/* enlever les puces sur les listes */
-ul,
-li {
-  list-style: none;
-}
-
 /* Enlever le style par default des liens */
 a {
   text-decoration: none;
@@ -89,7 +83,7 @@ a {
   height: 40px;
   object-fit: cover;
   border-radius: 100%;
-  transform: translateY(-5px);
+  transform: translateY(-5px);  
 }
 
 /* Style de la navigation suppérieure et footer */
@@ -296,6 +290,7 @@ tr td {
   width: 100%;
   display: flex;
   gap: 10px;
+  list-style: none;
 }
 
 .footer ul a {
