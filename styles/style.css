@@ -283,6 +283,7 @@ tr td {
 \*********************************/
 
 .footer {
+  padding: 10px;
   display: grid;
   row-gap: 20px;
   text-align: center;
@@ -308,10 +309,6 @@ tr td {
   transition:
     border .3s ease-out,
     color .3s ease-out;
-}
-
-.footer p {
-  margin-top: 20px;
 }
 
 .footer li:nth-child(1) a:hover {
