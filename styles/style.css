@@ -7,10 +7,6 @@
   src: url(../fonts/RainlyRegular-OVl7O.otf);
 }
 
-/************* Reset ************\
-
-\********************************/
-
 /* Reset des marge interne et externe */
 * {
   box-sizing: border-box;
@@ -23,10 +19,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-/*************** Header **************\
-
-\*************************************/
 
 /* Entête/Titre du blog */
 .header {
@@ -73,17 +65,13 @@ a {
   clear: both;
 }
 
-/************* Navigation ************\
-
-\*************************************/
-
 /* Mon logo */
 .logo img {
   width: 40px;
   height: 40px;
   object-fit: cover;
   border-radius: 100%;
-  transform: translateY(-5px);  
+  transform: translateY(-5px);
 }
 
 /* Style de la navigation suppérieure et footer */
@@ -132,10 +120,7 @@ a {
   margin-bottom: 20px;
 }
 
-/************* Button ************\
-
-\*********************************/
-
+/* Button */
 .button {
   background-color: #fff;
   border-radius: 999px;
@@ -154,10 +139,7 @@ footer a:hover {
   color: #D2483D;
 }
 
-/************* Formulaire ************\
-
-\*************************************/
-
+/* Formulaire */
 .contact {
   display: flex;
   align-items: center;
@@ -175,6 +157,7 @@ footer a:hover {
 
 input,
 textarea {
+  outline: 0;
   border: 1px solid #cccccc;
   padding: 8px;
   border-radius: 5px;
@@ -210,10 +193,7 @@ form input[type="submit"] {
   justify-self: center;
 }
 
-/************* Main Style ********\
-
-\*********************************/
-
+/* fake image */
 .fakeimg,
 .card img {
   width: 300px;
@@ -223,6 +203,7 @@ form input[type="submit"] {
   width: 100%;
 }
 
+/* Application des typographie */
 body {
   background-color: #F4F4F4;
   font-family: "Poppins", sans-serif;
@@ -254,10 +235,7 @@ h2 {
   width: 300px;
 }
 
-/*********** Tableau personalisé ********\
-
-\****************************************/
-
+/*  Tableau personalisé  */
 table {
   background-color: #fff;
   margin: 0 20px;
@@ -272,10 +250,7 @@ tr td {
   padding: 10px;
 }
 
-/************* Footer ************\
-
-\*********************************/
-
+/* Footer */
 .footer {
   padding: 10px;
   display: grid;
@@ -324,10 +299,6 @@ tr td {
   color: #363434;
 }
 
-/************* Media Queries ************\
-
-\****************************************/
-
 /* Disposition réactive : lorsque l'écran fait moins de 800 px de large, 
             empile les deux colonnes l'une sur l'autre plutôt que l'une à côté de l'autre. */
 @media screen and (max-width: 800px) {
@@ -350,7 +321,6 @@ tr td {
 /* Disposition réactive : lorsque l'écran fait moins de 600 px de large, 
                         empile les liens de navigation les uns sur les autres plutôt que les uns à côté des autres. */
 @media screen and (max-width: 600px) {
-
   .topnav a {
     float: none;
     width: 100%;
