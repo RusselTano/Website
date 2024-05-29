@@ -1,1 +1,0 @@
-photo cameroon https://www.aljazeera.com/gallery/2022/11/28/cameroon-fans 
