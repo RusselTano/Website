@@ -1,7 +1,3 @@
-/************* Design System ************\
-
-\****************************************/
-
 /* Police importée de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
@@ -15,33 +11,139 @@
 
 \********************************/
 
+/* Reset des marge interne et externe */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* enlever les puces sur les listes */
 ul,
 li {
   list-style: none;
 }
 
+/* Enlever le style par default des liens */
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/*************** Header **************\
+
+\*************************************/
+
+/* Entête/Titre du blog */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Id pour changer la couleur de mon titre */
+#home-title {
+  color: #D2483D;
+}
+
+/* Créez deux colonnes inégales qui flottent l'une à côté de l'autre */
+/* Colonne de droite */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Colonne de droite */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fausse image */
+.fakeimg {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Effet de carte sur les articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Éliminer le flottement après les colonnes */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /************* Navigation ************\
 
 \*************************************/
 
-.topnav__link {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #F4F4F4;
+/* Mon logo */
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 100%;
+  transform: translateY(-5px);
+}
+
+/* Style de la navigation suppérieure et footer */
+.topnav,
+.footer {
+  overflow: hidden;
+  background-color: #1b1a1a;
+  color: #fff;
+  height: 52px;
+}
+
+/* Style des liens dans la navigation suppérieure */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
+/* Changment de couleur sur lors du survol */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .logo:hover {
+  background-color: #1b1a1a;
+}
+
+/* Style lorsque nous somme sur la page */
 .topnav__link.active {
   background-color: #ddd;
   color: black;
+}
+
+/* Style des liens dans la navigation inferieur */
+.bottomnav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Surlignement lors du survol */
+.bottomnav__link:hover {
+  text-decoration: underline;
 }
 
 /************* Button ************\
@@ -53,8 +155,6 @@ a {
   border-radius: 999px;
   width: 150px;
   height: 40px;
-  border: 1px solid #cccccc;
-  text-transform: uppercase;
   transition:
     border-color .3s ease-out,
     color .3s ease-out;
@@ -136,12 +236,20 @@ form input[type="submit"] {
 
 \*********************************/
 
+/* Pied de page */
+.footer {
+  display: grid;
+  row-gap: 20px;
+  text-align: center;
+  margin-top: 20px;
+  height: auto;
+}
+
 .footer ul {
+  justify-content: center;
+  width: 100%;
   display: flex;
   gap: 10px;
-}
-.footer p{
-  margin-top: 20px;
 }
 
 .footer ul a {
@@ -155,6 +263,10 @@ form input[type="submit"] {
   transition:
     border .3s ease-out,
     color .3s ease-out;
+}
+
+.footer p {
+  margin-top: 20px;
 }
 
 .footer li:nth-child(1) a:hover {
@@ -193,8 +305,6 @@ h1 {
 
 h2 {
   font-family: "Lora", serif;
-
-  font-size: 1.5rem;
   color: #1b1a1a;
   text-decoration: underline #D2483D;
   text-underline-offset: 0.5rem;
@@ -202,10 +312,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-#home-title {
-  color: #D2483D;
-}
-
+/* Id pour changer le style du texte "karate" */
 #karate {
   font-family: rainly;
   font-size: 1.5rem;
@@ -215,12 +322,13 @@ h2 {
   width: 300px;
 }
 
-/************* Tableau personalisé ******\
+/*********** Tableau personalisé ********\
 
 \****************************************/
 
 table {
   background-color: #fff;
+  margin: 0 20px;
 }
 
 th {
@@ -236,44 +344,61 @@ tr td {
 
 \****************************************/
 
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-    line-height: 1.25rem;
+/* Disposition réactive : lorsque l'écran fait moins de 800 px de large, 
+            empile les deux colonnes l'une sur l'autre plutôt que l'une à côté de l'autre. */
+@media screen and (max-width: 800px) {
+
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
   }
 
-  .topnav__link{
+  .topnav,
+  .footer {
+    overflow: hidden;
+    background-color: #1b1a1a;
+    color: #fff;
+    height: auto;
+  }
+}
+
+/* Disposition réactive : lorsque l'écran fait moins de 600 px de large, 
+                        empile les liens de navigation les uns sur les autres plutôt que les uns à côté des autres. */
+@media screen and (max-width: 600px) {
+
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+
+  /* reduire la taille de mes liens */
+  .topnav__link {
     font-size: 16px;
   }
 
-  h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
+  /* reduction de la taille de mon iframe */
   form {
     width: 350px;
   }
 
+  /* alignement en colonne de mon formulaire et de mon iframe */
   .contact {
     flex-direction: column;
   }
 
+  /* reduction du iframe */
   iframe {
     width: 400px;
   }
 
+  /* Aligner mes elements de navigation a  */
   .topnav {
     display: grid;
   }
 
+  /* Centrer mon logo */
   .topnav div:first-child {
     justify-self: center;
   }
 }
-
